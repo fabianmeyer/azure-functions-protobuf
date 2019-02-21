@@ -1,0 +1,20 @@
+name: azure-functions-protobuf
+
+custom-setup:
+  dependencies:
+    - base
+    - Cabal
+    - proto-lens-setup
+
+extra-source-files: 
+    - proto/**/*.proto
+
+library:
+  dependencies:
+    - base
+    - proto-lens-runtime
+    - proto-lens-protobuf-types
+
+  exposed-modules:
+    - Proto.Src.Proto.FunctionRpc
+    - Proto.Src.Proto.FunctionRpc_Fields
